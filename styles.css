@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: bounceIn 2s ease-in-out infinite;
+}
+
+.sub-message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInText 3s 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
